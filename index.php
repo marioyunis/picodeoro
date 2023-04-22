@@ -1,46 +1,53 @@
-<?php
-session_start();
+<!doctype html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="#" />
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Login con  PHP - Bootstrap 4</title>
 
-if(!isset($_SESSION['user_id'])) {
-    header('Location: app/views/login.php');
-    exit();
-}
-?>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Proyecto</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Proyecto</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Galpones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Eventos</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="container mt-4">
-            <h1>Bienvenido</h1>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">        
+        
+        <link rel="stylesheet" type="text/css" href="fuentes/iconic/css/material-design-iconic-font.min.css">
+        
+    </head>
+    
+    <body>
+     
+      <div class="container-login">
+        <div class="wrap-login">
+            <form class="login-form validate-form" id="formLogin" action="" method="post">
+                <span class="login-form-title">LOGIN</span>
+                
+                <div class="wrap-input100" data-validate = "Usuario incorrecto">
+                    <input class="input100" type="text" id="usuario" name="usuario" placeholder="Usuario">
+                    <span class="focus-efecto"></span>
+                </div>
+                
+                <div class="wrap-input100" data-validate="Password incorrecto">
+                    <input class="input100" type="password" id="password" name="password" placeholder="Password">
+                    <span class="focus-efecto"></span>
+                </div>
+                
+                <div class="container-login-form-btn">
+                    <div class="wrap-login-form-btn">
+                        <div class="login-form-bgbtn"></div>
+                        <button type="submit" name="submit" class="login-form-btn">CONECTAR</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>
-</body>
+    </div>     
+        
+        
+     <script src="jquery/jquery-3.3.1.min.js"></script>    
+     <script src="bootstrap/js/bootstrap.min.js"></script>    
+     <script src="popper/popper.min.js"></script>    
+        
+     <script src="plugins/sweetalert2/sweetalert2.all.min.js"></script>    
+     <script src="codigo.js"></script>    
+    </body>
 </html>
